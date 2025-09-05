@@ -261,6 +261,19 @@ const DORUKS_DATA = [
     calories: 135,
     proteinPer100: 6.5,
     caloriesPer100: 108
+  },
+  {
+    id: 21,
+    name: "High Protein Drink Choco",
+    brand: "Coop",
+    location: "Coop",
+    taste: 8,
+    price: 1.95,
+    size: 500,
+    protein: 40.0,
+    calories: 290,
+    proteinPer100: 8.0,
+    caloriesPer100: 58
   }
 ]
 
