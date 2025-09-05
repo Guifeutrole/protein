@@ -103,7 +103,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-white">
       {isFirstTime && (
         <WelcomeModal 
           onChooseDoruk={initWithDoruksData}
@@ -113,7 +113,7 @@ function App() {
       
       <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-8">
         <header className="text-center mb-6 sm:mb-8 animate-fade-in">
-          <h1 className="text-3xl sm:text-5xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent flex items-center justify-center gap-2 sm:gap-3">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-white to-red-200 bg-clip-text text-transparent flex items-center justify-center gap-2 sm:gap-3">
             <span>Swiss Protein Tracker</span>
             <span className="text-2xl sm:text-3xl animate-pulse">🇨🇭</span>
           </h1>
@@ -151,10 +151,10 @@ function App() {
           </div>
           <button
             onClick={() => setShowDailyTracker(true)}
-            className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur rounded-lg sm:rounded-xl p-3 sm:p-4 flex items-center gap-2 sm:gap-3 border border-purple-500/20 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer"
+            className="bg-gradient-to-br from-red-500/10 to-white/10 backdrop-blur rounded-lg sm:rounded-xl p-3 sm:p-4 flex items-center gap-2 sm:gap-3 border border-red-500/20 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 cursor-pointer"
           >
-            <div className="bg-purple-500/20 p-2 sm:p-3 rounded-lg">
-              <Target className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500" />
+            <div className="bg-red-500/20 p-2 sm:p-3 rounded-lg">
+              <Target className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
             </div>
             <div className="text-left">
               <p className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider">Daily Goal</p>
@@ -170,7 +170,7 @@ function App() {
                 onClick={() => setViewMode('table')}
                 className={`flex-1 sm:flex-initial px-3 sm:px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 ${
                   viewMode === 'table' 
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105' 
+                    ? 'bg-gradient-to-r from-red-600 to-red-500 text-white shadow-lg scale-105' 
                     : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
                 }`}
               >
@@ -181,7 +181,7 @@ function App() {
                 onClick={() => setViewMode('cards')}
                 className={`flex-1 sm:flex-initial px-3 sm:px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 ${
                   viewMode === 'cards' 
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105' 
+                    ? 'bg-gradient-to-r from-red-600 to-red-500 text-white shadow-lg scale-105' 
                     : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
                 }`}
               >
@@ -194,7 +194,7 @@ function App() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="flex-1 sm:flex-initial px-2 sm:px-4 py-2 rounded-lg bg-gray-700/50 text-white text-sm sm:text-base border border-gray-600/50 focus:border-purple-500 focus:outline-none transition-all duration-300 hover:bg-gray-600/50"
+                className="flex-1 sm:flex-initial px-2 sm:px-4 py-2 rounded-lg bg-gray-700/50 text-white text-sm sm:text-base border border-gray-600/50 focus:border-red-500 focus:outline-none transition-all duration-300 hover:bg-gray-600/50"
               >
                 <option value="score">Score</option>
                 <option value="proteinPerCHF">Value</option>
@@ -207,7 +207,7 @@ function App() {
               <select
                 value={filterLocation}
                 onChange={(e) => setFilterLocation(e.target.value)}
-                className="flex-1 sm:flex-initial px-2 sm:px-4 py-2 rounded-lg bg-gray-700/50 text-white text-sm sm:text-base border border-gray-600/50 focus:border-purple-500 focus:outline-none transition-all duration-300 hover:bg-gray-600/50"
+                className="flex-1 sm:flex-initial px-2 sm:px-4 py-2 rounded-lg bg-gray-700/50 text-white text-sm sm:text-base border border-gray-600/50 focus:border-red-500 focus:outline-none transition-all duration-300 hover:bg-gray-600/50"
               >
                 {locations.map(loc => (
                   <option key={loc} value={loc}>
@@ -220,7 +220,7 @@ function App() {
             <div className="flex gap-2 w-full sm:w-auto">
               <button
                 onClick={() => setShowAddModal(true)}
-                className="flex-1 sm:flex-initial px-3 sm:px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="flex-1 sm:flex-initial px-3 sm:px-4 py-2 bg-white text-red-600 hover:bg-red-50 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold"
               >
                 <Plus className="w-4 h-4" />
                 <span className="sm:inline">Add</span>

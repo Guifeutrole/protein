@@ -80,7 +80,7 @@ function AddProductModal({ product, onClose, onSave }) {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-3 sm:px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white text-sm sm:text-base placeholder-gray-400 focus:border-blue-500 focus:outline-none"
+                className="w-full px-3 sm:px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white text-sm sm:text-base placeholder-gray-400 focus:border-red-500 focus:outline-none"
                 placeholder="e.g., High Protein Milk"
                 required
               />
@@ -95,7 +95,7 @@ function AddProductModal({ product, onClose, onSave }) {
                 name="brand"
                 value={formData.brand}
                 onChange={handleChange}
-                className="w-full px-3 sm:px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white text-sm sm:text-base placeholder-gray-400 focus:border-blue-500 focus:outline-none"
+                className="w-full px-3 sm:px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white text-sm sm:text-base placeholder-gray-400 focus:border-red-500 focus:outline-none"
                 placeholder="e.g., Milbona"
                 required
               />
@@ -242,7 +242,7 @@ function AddProductModal({ product, onClose, onSave }) {
             </button>
             <button
               type="submit"
-              className="flex-1 px-3 sm:px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white text-sm sm:text-base flex items-center justify-center gap-1 sm:gap-2 transition"
+              className="flex-1 px-3 sm:px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg text-white text-sm sm:text-base flex items-center justify-center gap-1 sm:gap-2 transition"
             >
               <Save className="w-4 h-4" />
               {product ? 'Update' : 'Add'}

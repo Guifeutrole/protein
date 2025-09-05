@@ -4,10 +4,10 @@ import { Package, Sparkles, UserPlus, Zap, Heart, TrendingUp } from 'lucide-reac
 function WelcomeModal({ onChooseDoruk, onStartFresh }) {
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50 animate-fade-in">
-      <div className="bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 rounded-3xl max-w-md w-full p-8 text-center border border-purple-500/20 shadow-2xl animate-slide-up">
+      <div className="bg-gradient-to-br from-gray-900 via-red-900/20 to-gray-900 rounded-3xl max-w-md w-full p-8 text-center border border-red-500/20 shadow-2xl animate-slide-up">
         <div className="mb-6">
           <div className="text-6xl mb-4 animate-bounce-slow">🇨🇭</div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent mb-3">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent mb-3">
             Welcome, Swiss Friend! 👋
           </h1>
           <p className="text-gray-300 text-base leading-relaxed">
@@ -36,14 +36,14 @@ function WelcomeModal({ onChooseDoruk, onStartFresh }) {
         <div className="space-y-3">
           <button
             onClick={onChooseDoruk}
-            className="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-xl text-white font-semibold flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-purple-500/25"
+            className="w-full py-4 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 rounded-xl text-white font-semibold flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-red-500/25"
           >
             <Package className="w-5 h-5" />
             Start with My Top 20 (Tested & Rated)
           </button>
           <button
             onClick={onStartFresh}
-            className="w-full py-4 bg-gray-800/50 hover:bg-gray-700/50 border border-gray-600/50 rounded-xl text-white font-medium flex items-center justify-center gap-2 transition-all duration-300"
+            className="w-full py-4 bg-white/10 hover:bg-white/20 border border-white/30 rounded-xl text-white font-medium flex items-center justify-center gap-2 transition-all duration-300"
           >
             <UserPlus className="w-5 h-5" />
             Create Your Own List
