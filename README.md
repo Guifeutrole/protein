@@ -1,73 +1,42 @@
-# Doruk's Protein Tracker 🇨🇭
+# Swiss Protein Tracker 🇨🇭
 
-A sleek, modern protein tracking app for Swiss fitness enthusiasts. Track protein deals from Migros, Coop, Lidl, and Aldi with smart scoring algorithms.
+Free protein tracker for everyone in Switzerland trying to hit their daily protein goals on a budget.
 
 ## Features
-
-- 📊 Smart scoring algorithm (protein/CHF, taste, calories)
+- 📊 Track protein from Migros, Coop, Lidl & Aldi
+- 💪 Daily protein goal tracker (default: 140g)
+- 🎯 Smart scoring based on protein/CHF, taste, and calories
+- 📱 Mobile-optimized interface
 - 💾 Local storage - your data stays on your device
-- 📱 Responsive design for mobile and desktop
-- 🎯 Daily protein goal tracking
-- 📤 Export/Import data as JSON
-- 🌙 Dark/Light theme support
-- ✨ Beautiful, modern UI
+- 🔄 Reset functionality to start fresh
+- 📥 Import/Export your product lists
 
-## Deploy Your Own
+## Live Demo
+Visit: https://protein.doruk.ch
 
-### Quick Deploy
+## Development
 
-1. Fork this repository
-2. Clone to your local machine:
 ```bash
-git clone https://github.com/[your-username]/protein-tracker.git
-cd protein-tracker
-```
-
-3. Install dependencies (optional, for local server):
-```bash
+# Install dependencies
 npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-4. Run locally:
-```bash
-npm start
-```
+## Deployment
 
-5. Deploy to your subdomain:
-   - Upload files to your web server
-   - Point subdomain to the folder
-   - No backend required!
+This project is set up for automatic deployment to Vercel. Simply push to the main branch and it will deploy automatically.
 
-### Hosting Options
+## About
 
-- **GitHub Pages**: Free, easy deployment
-- **Netlify**: Free tier with custom domain
-- **Vercel**: Great for static sites
-- **Your own server**: Just upload the files
+Built by [Doruk Ozturk](https://www.linkedin.com/in/doruk-ozturk) - a 23yo student in Switzerland trying to hit 140g protein daily without protein powder.
 
-## Technology
-
-- Pure JavaScript (no framework dependencies)
-- Local Storage API for data persistence
-- Modern CSS with CSS Grid and Flexbox
-- Responsive design
-- PWA-ready
-
-## Data Storage
-
-All data is stored locally in your browser using localStorage. No server, no database, no tracking.
-
-## Customization
-
-Edit these files to customize:
-- `app.js` - Modify scoring algorithm
-- `styles.css` - Change colors and design
-- `index.html` - Update branding
+All taste ratings are personal opinions. Feel free to add your own products and ratings!
 
 ## License
 
-MIT - Feel free to use for your own protein tracking!
-
----
-
-Made with 💪 by Doruk | [doruk.ch](https://doruk.ch)
+Free and open source - use it however you want! 🆓
