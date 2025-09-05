@@ -33,10 +33,10 @@ This project is set up for automatic deployment to Vercel. Simply push to the ma
 
 ## About
 
-Built by [Doruk Ozturk](https://www.linkedin.com/in/doruk-ozturk) - a 23yo student in Switzerland trying to hit 140g protein daily without protein powder.
+Built by [Doruk Ozturk](https://www.linkedin.com/in/doruk-ozturk) - a student in Switzerland trying to hit 140g protein daily without protein powder and on a budget.
 
 All taste ratings are personal opinions. Feel free to add your own products and ratings!
 
 ## License
 
-Free and open source - use it however you want! 🆓
+Free and open source - use it however you want :3
