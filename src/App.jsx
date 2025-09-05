@@ -114,9 +114,8 @@ function App() {
       <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-8">
         <header className="text-center mb-8 animate-fade-in">
           <div className="inline-block">
-            <h1 className="text-4xl sm:text-6xl font-black mb-3 bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent flex items-center justify-center gap-3">
-              <span>Swiss Protein Tracker</span>
-              <span className="text-3xl sm:text-4xl animate-bounce-slow">🇨🇭</span>
+            <h1 className="text-4xl sm:text-6xl font-black mb-3 bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
+              Swiss Protein Tracker
             </h1>
             <div className="h-1 bg-gradient-to-r from-red-600 to-red-700 rounded-full mb-4"></div>
           </div>
