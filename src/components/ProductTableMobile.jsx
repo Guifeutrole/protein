@@ -31,43 +31,43 @@ function ProductTableMobile({ products, onEdit, onDelete }) {
   return (
     <div className="space-y-3">
       {products.map((product) => (
-        <div key={product.id} className="bg-gray-800/30 backdrop-blur rounded-xl p-4 border border-gray-700/30">
+        <div key={product.id} className="bg-white rounded-xl p-4 border-2 border-gray-200 shadow-md">
           <div className="flex justify-between items-start mb-3">
             <div>
-              <h3 className="font-semibold text-white text-lg">{product.name}</h3>
-              <p className="text-sm text-gray-400">{product.brand}</p>
+              <h3 className="font-semibold text-gray-900 text-lg">{product.name}</h3>
+              <p className="text-sm text-gray-600">{product.brand}</p>
               <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium mt-2 ${getLocationColor(product.location)}`}>
                 <MapPin className="w-3 h-3" />
                 {product.location}
               </span>
             </div>
-            <div className={`bg-gradient-to-r ${getScoreColor(product.score)} text-white px-3 py-1.5 rounded-lg font-bold text-lg`}>
+            <div className={`bg-gradient-to-r ${getScoreColor(product.score)} text-white px-3 py-1.5 rounded-lg font-bold text-lg shadow-md`}>
               {product.score}
             </div>
           </div>
 
           <div className="grid grid-cols-3 gap-2 mb-3">
-            <div className="bg-gray-900/30 rounded-lg p-2 text-center">
+            <div className="bg-gray-50 rounded-lg p-2 text-center border border-gray-200">
               <div className="flex items-center justify-center gap-1 mb-1">
                 <TrendingUp className="w-3 h-3 text-green-400" />
                 <span className="text-[10px] text-gray-400">Value</span>
               </div>
               <p className="text-sm font-semibold text-green-400">{product.proteinPerCHF}g</p>
             </div>
-            <div className="bg-gray-900/30 rounded-lg p-2 text-center">
+            <div className="bg-gray-50 rounded-lg p-2 text-center border border-gray-200">
               <div className="flex items-center justify-center gap-1 mb-1">
                 <Sparkles className="w-3 h-3 text-white" />
                 <span className="text-[10px] text-gray-400">Taste</span>
               </div>
-              <p className="text-sm font-semibold text-white">{product.taste}/10 {getTasteEmoji(product.taste)}</p>
+              <p className="text-sm font-semibold text-gray-900">{product.taste}/10 {getTasteEmoji(product.taste)}</p>
             </div>
-            <div className="bg-gray-900/30 rounded-lg p-2 text-center">
+            <div className="bg-gray-50 rounded-lg p-2 text-center border border-gray-200">
               <span className="text-[10px] text-gray-400 block">Price</span>
-              <p className="text-sm font-semibold text-yellow-400">CHF {product.price.toFixed(2)}</p>
+              <p className="text-sm font-semibold text-orange-600">CHF {product.price.toFixed(2)}</p>
             </div>
           </div>
 
-          <div className="flex items-center justify-between text-xs text-gray-400 mb-3">
+          <div className="flex items-center justify-between text-xs text-gray-600 mb-3">
             <span>{product.protein}g protein / {product.size}g</span>
             <span>{product.calories} cal ({product.caloriesPer100}/100g)</span>
           </div>
@@ -75,10 +75,10 @@ function ProductTableMobile({ products, onEdit, onDelete }) {
           <div className="flex gap-2">
             <button
               onClick={() => onEdit(product)}
-              className="flex-1 py-2 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-2 bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg flex items-center justify-center gap-2 transition-all"
             >
-              <Edit className="w-4 h-4 text-white" />
-              <span className="text-sm text-white">Edit</span>
+              <Edit className="w-4 h-4 text-gray-700" />
+              <span className="text-sm text-gray-700">Edit</span>
             </button>
             <button
               onClick={() => {
@@ -86,7 +86,7 @@ function ProductTableMobile({ products, onEdit, onDelete }) {
                   onDelete(product.id)
                 }
               }}
-              className="flex-1 py-2 bg-red-600/20 hover:bg-red-600/30 rounded-lg flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-2 bg-red-50 hover:bg-red-100 border border-red-300 rounded-lg flex items-center justify-center gap-2 transition-all"
             >
               <Trash2 className="w-4 h-4 text-red-400" />
               <span className="text-sm text-red-400">Delete</span>

@@ -20,42 +20,42 @@ function ProductTable({ products, onEdit, onDelete }) {
 
   return (
     <div className="overflow-x-auto rounded-xl">
-      <table className="w-full bg-gray-800/30 backdrop-blur-md rounded-xl overflow-hidden">
-        <thead className="bg-gradient-to-r from-red-800/50 to-red-900/50 backdrop-blur">
+      <table className="w-full bg-white rounded-xl overflow-hidden shadow-lg">
+        <thead className="bg-red-600">
           <tr>
-            <th className="px-4 py-4 text-left text-sm font-semibold text-gray-200">Product</th>
-            <th className="px-4 py-4 text-left text-sm font-semibold text-gray-200">Store</th>
-            <th className="px-4 py-4 text-center text-sm font-semibold text-gray-200">
+            <th className="px-4 py-4 text-left text-sm font-semibold text-white">Product</th>
+            <th className="px-4 py-4 text-left text-sm font-semibold text-white">Store</th>
+            <th className="px-4 py-4 text-center text-sm font-semibold text-white">
               <div className="flex items-center justify-center gap-1">
-                <Trophy className="w-4 h-4 text-yellow-400 animate-pulse" />
+                <Trophy className="w-4 h-4 text-yellow-300 animate-pulse" />
                 <span>Score</span>
               </div>
             </th>
-            <th className="px-4 py-4 text-center text-sm font-semibold text-gray-200">
+            <th className="px-4 py-4 text-center text-sm font-semibold text-white">
               <div className="flex items-center justify-center gap-1">
-                <TrendingUp className="w-4 h-4 text-green-400" />
+                <TrendingUp className="w-4 h-4 text-green-300" />
                 <span>Value</span>
               </div>
             </th>
-            <th className="px-4 py-4 text-center text-sm font-semibold text-gray-200">
+            <th className="px-4 py-4 text-center text-sm font-semibold text-white">
               <div className="flex items-center justify-center gap-1">
                 <Sparkles className="w-4 h-4 text-white" />
                 <span>Taste</span>
               </div>
             </th>
-            <th className="px-4 py-4 text-center text-sm font-semibold text-gray-200">Price</th>
-            <th className="px-4 py-4 text-center text-sm font-semibold text-gray-200">Protein</th>
-            <th className="px-4 py-4 text-center text-sm font-semibold text-gray-200">Calories</th>
-            <th className="px-4 py-4 text-center text-sm font-semibold text-gray-200">Actions</th>
+            <th className="px-4 py-4 text-center text-sm font-semibold text-white">Price</th>
+            <th className="px-4 py-4 text-center text-sm font-semibold text-white">Protein</th>
+            <th className="px-4 py-4 text-center text-sm font-semibold text-white">Calories</th>
+            <th className="px-4 py-4 text-center text-sm font-semibold text-white">Actions</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-700/30">
+        <tbody className="divide-y divide-gray-200">
           {products.map((product) => (
-            <tr key={product.id} className="hover:bg-gray-700/40 transition-all duration-200 group">
+            <tr key={product.id} className="hover:bg-gray-50 transition-all duration-200 group">
               <td className="px-4 py-4">
                 <div className="group-hover:translate-x-1 transition-transform duration-200">
-                  <div className="font-medium text-white">{product.name}</div>
-                  <div className="text-sm text-gray-400">{product.brand}</div>
+                  <div className="font-medium text-gray-900">{product.name}</div>
+                  <div className="text-sm text-gray-600">{product.brand}</div>
                 </div>
               </td>
               <td className="px-4 py-4">
@@ -75,38 +75,38 @@ function ProductTable({ products, onEdit, onDelete }) {
                 </span>
               </td>
               <td className="px-4 py-4 text-center">
-                <span className="text-green-400 font-semibold group-hover:text-green-300 transition-colors">
+                <span className="text-green-600 font-semibold group-hover:text-green-700 transition-colors">
                   {product.proteinPerCHF}g
                 </span>
               </td>
               <td className="px-4 py-4 text-center">
                 <div className="flex items-center justify-center gap-1 group-hover:scale-110 transition-transform duration-200">
-                  <span className="text-white font-medium">{product.taste}/10</span>
+                  <span className="text-gray-900 font-medium">{product.taste}/10</span>
                   <span className="text-lg">{getTasteEmoji(product.taste)}</span>
                 </div>
               </td>
               <td className="px-4 py-4 text-center">
-                <span className="text-yellow-400 font-medium">CHF {product.price.toFixed(2)}</span>
+                <span className="text-orange-600 font-medium">CHF {product.price.toFixed(2)}</span>
               </td>
               <td className="px-4 py-4 text-center">
                 <div>
-                  <div className="text-white font-medium">{product.protein}g</div>
-                  <div className="text-xs text-gray-500">{product.size}g</div>
+                  <div className="text-gray-900 font-medium">{product.protein}g</div>
+                  <div className="text-xs text-gray-600">{product.size}g</div>
                 </div>
               </td>
               <td className="px-4 py-4 text-center">
                 <div>
-                  <div className="text-white">{product.calories}</div>
-                  <div className="text-xs text-gray-500">{product.caloriesPer100}/100g</div>
+                  <div className="text-gray-900">{product.calories}</div>
+                  <div className="text-xs text-gray-600">{product.caloriesPer100}/100g</div>
                 </div>
               </td>
               <td className="px-4 py-4">
                 <div className="flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                   <button
                     onClick={() => onEdit(product)}
-                    className="p-2 bg-white/20 hover:bg-white/30 rounded-lg transition-all duration-200 hover:scale-110"
+                    className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-all duration-200 hover:scale-110"
                   >
-                    <Edit className="w-4 h-4 text-blue-400" />
+                    <Edit className="w-4 h-4 text-gray-700" />
                   </button>
                   <button
                     onClick={() => {

@@ -29,11 +29,11 @@ function ProductCard({ product, onEdit, onDelete }) {
   }
 
   return (
-    <div className="bg-gray-800/50 backdrop-blur rounded-lg p-4 sm:p-5 hover:bg-gray-800/70 transition-all sm:hover:scale-[1.02] border border-gray-700">
+    <div className="bg-white rounded-lg p-4 sm:p-5 hover:shadow-xl transition-all sm:hover:scale-[1.02] border-2 border-gray-200">
       <div className="flex justify-between items-start mb-3">
         <div className="flex-1">
-          <h3 className="font-semibold text-base sm:text-lg text-white mb-1">{product.name}</h3>
-          <p className="text-xs sm:text-sm text-gray-400">{product.brand}</p>
+          <h3 className="font-semibold text-base sm:text-lg text-gray-900 mb-1">{product.name}</h3>
+          <p className="text-xs sm:text-sm text-gray-600">{product.brand}</p>
         </div>
         <div className={`px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg font-bold text-base sm:text-lg ${getScoreColor(product.score)}`}>
           {product.score}
@@ -46,19 +46,19 @@ function ProductCard({ product, onEdit, onDelete }) {
       </div>
 
       <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
-        <div className="bg-gray-900/30 rounded-lg p-2 sm:p-3">
+        <div className="bg-gray-50 rounded-lg p-2 sm:p-3 border border-gray-200">
           <div className="flex items-center gap-1 text-[10px] sm:text-xs text-gray-400 mb-1">
             <TrendingUp className="w-3 h-3" />
             <span>Value</span>
           </div>
           <p className="text-base sm:text-lg font-semibold text-green-400">{product.proteinPerCHF}g</p>
         </div>
-        <div className="bg-gray-900/30 rounded-lg p-2 sm:p-3">
+        <div className="bg-gray-50 rounded-lg p-2 sm:p-3 border border-gray-200">
           <div className="flex items-center gap-1 text-[10px] sm:text-xs text-gray-400 mb-1">
             <Sparkles className="w-3 h-3" />
             <span>Taste</span>
           </div>
-          <p className="text-base sm:text-lg font-semibold text-white flex items-center gap-1">
+          <p className="text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-1">
             {product.taste}/10 {getTasteEmoji(product.taste)}
           </p>
         </div>
@@ -66,30 +66,30 @@ function ProductCard({ product, onEdit, onDelete }) {
 
       <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
         <div className="flex justify-between">
-          <span className="text-gray-400">Price</span>
-          <span className="text-yellow-400 font-medium">CHF {product.price.toFixed(2)}</span>
+          <span className="text-gray-600">Price</span>
+          <span className="text-orange-600 font-medium">CHF {product.price.toFixed(2)}</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-gray-400">Protein</span>
-          <span className="text-white">
-            {product.protein}g <span className="text-gray-500 text-[10px] sm:text-xs">/ {product.size}g</span>
+          <span className="text-gray-600">Protein</span>
+          <span className="text-gray-900">
+            {product.protein}g <span className="text-gray-600 text-[10px] sm:text-xs">/ {product.size}g</span>
           </span>
         </div>
         <div className="flex justify-between">
-          <span className="text-gray-400">Calories</span>
-          <span className="text-white">
-            {product.calories} <span className="text-gray-500 text-[10px] sm:text-xs">({product.caloriesPer100}/100g)</span>
+          <span className="text-gray-600">Calories</span>
+          <span className="text-gray-900">
+            {product.calories} <span className="text-gray-600 text-[10px] sm:text-xs">({product.caloriesPer100}/100g)</span>
           </span>
         </div>
       </div>
 
-      <div className="flex gap-2 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-700">
+      <div className="flex gap-2 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200">
         <button
           onClick={() => onEdit(product)}
-          className="flex-1 py-1.5 sm:py-2 bg-blue-600/20 hover:bg-blue-600/30 rounded-lg flex items-center justify-center gap-1 sm:gap-2 transition"
+          className="flex-1 py-1.5 sm:py-2 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center gap-1 sm:gap-2 transition border border-gray-300"
         >
-          <Edit className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-blue-400" />
-          <span className="text-xs sm:text-sm text-blue-400">Edit</span>
+          <Edit className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-gray-700" />
+          <span className="text-xs sm:text-sm text-gray-700">Edit</span>
         </button>
         <button
           onClick={() => {
@@ -97,7 +97,7 @@ function ProductCard({ product, onEdit, onDelete }) {
               onDelete(product.id)
             }
           }}
-          className="flex-1 py-1.5 sm:py-2 bg-red-600/20 hover:bg-red-600/30 rounded-lg flex items-center justify-center gap-1 sm:gap-2 transition"
+          className="flex-1 py-1.5 sm:py-2 bg-red-50 hover:bg-red-100 rounded-lg flex items-center justify-center gap-1 sm:gap-2 transition border border-red-300"
         >
           <Trash2 className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-red-400" />
           <span className="text-xs sm:text-sm text-red-400">Delete</span>
