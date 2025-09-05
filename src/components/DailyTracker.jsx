@@ -65,7 +65,7 @@ function DailyTracker({ products, onClose }) {
     if (progress < 50) return 'from-red-500 to-orange-500'
     if (progress < 80) return 'from-yellow-500 to-orange-500'
     if (progress < 100) return 'from-green-500 to-emerald-500'
-    return 'from-purple-500 to-pink-500'
+    return 'from-red-500 to-red-600'
   }
 
   const getMotivationalMessage = () => {
@@ -82,7 +82,7 @@ function DailyTracker({ products, onClose }) {
       <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden border border-gray-700/50 shadow-2xl">
         <div className="sticky top-0 bg-gray-900/90 backdrop-blur border-b border-gray-700/50 p-6 flex justify-between items-center">
           <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-            <Target className="w-7 h-7 text-purple-500" />
+            <Target className="w-7 h-7 text-red-500" />
             Daily Protein Tracker
           </h2>
           <button
@@ -170,7 +170,7 @@ function DailyTracker({ products, onClose }) {
               <select
                 value={selectedProduct}
                 onChange={(e) => setSelectedProduct(e.target.value)}
-                className="flex-1 px-4 py-2 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white focus:border-purple-500 focus:outline-none"
+                className="flex-1 px-4 py-2 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white focus:border-red-500 focus:outline-none"
               >
                 <option value="">Select a product...</option>
                 {products.sort((a, b) => b.score - a.score).map(product => (
@@ -192,7 +192,7 @@ function DailyTracker({ products, onClose }) {
               <button
                 onClick={addProduct}
                 disabled={!selectedProduct}
-                className="px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 disabled:from-gray-600 disabled:to-gray-600 rounded-lg flex items-center gap-2 transition-all duration-300 disabled:opacity-50"
+                className="px-4 py-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-600 rounded-lg flex items-center gap-2 transition-all duration-300 disabled:opacity-50 text-white"
               >
                 <Plus className="w-4 h-4" />
                 Add

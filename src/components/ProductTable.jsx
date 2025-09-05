@@ -21,7 +21,7 @@ function ProductTable({ products, onEdit, onDelete }) {
   return (
     <div className="overflow-x-auto rounded-xl">
       <table className="w-full bg-gray-800/30 backdrop-blur-md rounded-xl overflow-hidden">
-        <thead className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 backdrop-blur">
+        <thead className="bg-gradient-to-r from-red-800/50 to-red-900/50 backdrop-blur">
           <tr>
             <th className="px-4 py-4 text-left text-sm font-semibold text-gray-200">Product</th>
             <th className="px-4 py-4 text-left text-sm font-semibold text-gray-200">Store</th>
@@ -39,7 +39,7 @@ function ProductTable({ products, onEdit, onDelete }) {
             </th>
             <th className="px-4 py-4 text-center text-sm font-semibold text-gray-200">
               <div className="flex items-center justify-center gap-1">
-                <Sparkles className="w-4 h-4 text-purple-400" />
+                <Sparkles className="w-4 h-4 text-white" />
                 <span>Taste</span>
               </div>
             </th>
@@ -63,7 +63,7 @@ function ProductTable({ products, onEdit, onDelete }) {
                   product.location === 'Migros' ? 'bg-orange-500/20 text-orange-300' :
                   product.location === 'Coop' ? 'bg-red-500/20 text-red-300' :
                   product.location === 'Lidl' ? 'bg-blue-500/20 text-blue-300' :
-                  product.location === 'Aldi' ? 'bg-purple-500/20 text-purple-300' :
+                  product.location === 'Aldi' ? 'bg-cyan-500/20 text-cyan-300' :
                   'bg-gray-500/20 text-gray-300'
                 }`}>
                   {product.location}
@@ -104,7 +104,7 @@ function ProductTable({ products, onEdit, onDelete }) {
                 <div className="flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                   <button
                     onClick={() => onEdit(product)}
-                    className="p-2 bg-blue-600/20 hover:bg-blue-600/30 rounded-lg transition-all duration-200 hover:scale-110"
+                    className="p-2 bg-white/20 hover:bg-white/30 rounded-lg transition-all duration-200 hover:scale-110"
                   >
                     <Edit className="w-4 h-4 text-blue-400" />
                   </button>

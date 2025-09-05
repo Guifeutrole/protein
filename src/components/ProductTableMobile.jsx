@@ -23,7 +23,7 @@ function ProductTableMobile({ products, onEdit, onDelete }) {
       case 'Migros': return 'bg-orange-500/20 text-orange-300'
       case 'Coop': return 'bg-red-500/20 text-red-300'
       case 'Lidl': return 'bg-blue-500/20 text-blue-300'
-      case 'Aldi': return 'bg-purple-500/20 text-purple-300'
+      case 'Aldi': return 'bg-cyan-500/20 text-cyan-300'
       default: return 'bg-gray-500/20 text-gray-300'
     }
   }
@@ -56,7 +56,7 @@ function ProductTableMobile({ products, onEdit, onDelete }) {
             </div>
             <div className="bg-gray-900/30 rounded-lg p-2 text-center">
               <div className="flex items-center justify-center gap-1 mb-1">
-                <Sparkles className="w-3 h-3 text-purple-400" />
+                <Sparkles className="w-3 h-3 text-white" />
                 <span className="text-[10px] text-gray-400">Taste</span>
               </div>
               <p className="text-sm font-semibold text-white">{product.taste}/10 {getTasteEmoji(product.taste)}</p>
@@ -75,10 +75,10 @@ function ProductTableMobile({ products, onEdit, onDelete }) {
           <div className="flex gap-2">
             <button
               onClick={() => onEdit(product)}
-              className="flex-1 py-2 bg-blue-600/20 hover:bg-blue-600/30 rounded-lg flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-2 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center gap-2 transition-all"
             >
-              <Edit className="w-4 h-4 text-blue-400" />
-              <span className="text-sm text-blue-400">Edit</span>
+              <Edit className="w-4 h-4 text-white" />
+              <span className="text-sm text-white">Edit</span>
             </button>
             <button
               onClick={() => {
