@@ -112,66 +112,69 @@ function App() {
       )}
       
       <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-8">
-        <header className="text-center mb-6 sm:mb-8 animate-fade-in">
-          <h1 className="text-3xl sm:text-5xl font-bold mb-2 sm:mb-3 text-red-600 flex items-center justify-center gap-2 sm:gap-3">
-            <span>Swiss Protein Tracker</span>
-            <span className="text-2xl sm:text-3xl animate-pulse">🇨🇭</span>
-          </h1>
-          <p className="text-gray-700 text-base sm:text-lg">Free tool for everyone in Switzerland hitting their protein goals</p>
-          <p className="text-gray-600 text-xs sm:text-sm mt-1 px-4 sm:px-0">140g daily from Migros, Coop, Lidl & Aldi - no powder, just real food!</p>
+        <header className="text-center mb-8 animate-fade-in">
+          <div className="inline-block">
+            <h1 className="text-4xl sm:text-6xl font-black mb-3 bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent flex items-center justify-center gap-3">
+              <span>Swiss Protein Tracker</span>
+              <span className="text-3xl sm:text-4xl animate-bounce-slow">🇨🇭</span>
+            </h1>
+            <div className="h-1 bg-gradient-to-r from-red-600 to-red-700 rounded-full mb-4"></div>
+          </div>
+          <p className="text-gray-700 text-lg sm:text-xl font-semibold">Free tool for everyone in Switzerland hitting their protein goals</p>
+          <p className="text-gray-600 text-sm sm:text-base mt-2">140g daily from Migros, Coop, Lidl & Aldi - no powder, just real food!</p>
         </header>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
-          <div className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 flex items-center gap-2 sm:gap-3 border-2 border-red-100 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:border-red-300">
-            <div className="bg-red-50 p-2 sm:p-3 rounded-lg">
-              <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-red-600 animate-bounce-slow" />
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div className="bg-white rounded-xl p-4 flex items-center gap-3 border-2 border-gray-100 hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:border-red-200 transform hover:-translate-y-1 group">
+            <div className="bg-gradient-to-br from-red-500 to-red-600 p-3 rounded-xl shadow-lg shadow-red-500/30 group-hover:shadow-xl group-hover:shadow-red-500/40 transition-all duration-500">
+              <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <div>
-              <p className="text-[10px] sm:text-xs text-gray-600 uppercase tracking-wider">Avg Score</p>
-              <p className="text-lg sm:text-2xl font-bold text-gray-900">{stats.avgScore}</p>
+              <p className="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider font-semibold">Avg Score</p>
+              <p className="text-xl sm:text-2xl font-black text-gray-900 group-hover:scale-110 transition-transform duration-300">{stats.avgScore}</p>
             </div>
           </div>
-          <div className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 flex items-center gap-2 sm:gap-3 border-2 border-green-100 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:border-green-300">
-            <div className="bg-green-50 p-2 sm:p-3 rounded-lg">
-              <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
+          <div className="bg-white rounded-xl p-4 flex items-center gap-3 border-2 border-gray-100 hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:border-green-200 transform hover:-translate-y-1 group">
+            <div className="bg-gradient-to-br from-green-500 to-green-600 p-3 rounded-xl shadow-lg shadow-green-500/30 group-hover:shadow-xl group-hover:shadow-green-500/40 transition-all duration-500">
+              <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <div>
-              <p className="text-[10px] sm:text-xs text-gray-600 uppercase tracking-wider">Value</p>
-              <p className="text-lg sm:text-2xl font-bold text-gray-900">{stats.avgProteinPerCHF}<span className="text-sm sm:text-base">g/CHF</span></p>
+              <p className="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider font-semibold">Value</p>
+              <p className="text-xl sm:text-2xl font-black text-gray-900 group-hover:scale-110 transition-transform duration-300">{stats.avgProteinPerCHF}<span className="text-sm sm:text-base text-gray-500">g/CHF</span></p>
             </div>
           </div>
-          <div className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 flex items-center gap-2 sm:gap-3 border-2 border-blue-100 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:border-blue-300">
-            <div className="bg-blue-50 p-2 sm:p-3 rounded-lg">
-              <Package className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+          <div className="bg-white rounded-xl p-4 flex items-center gap-3 border-2 border-gray-100 hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:border-blue-200 transform hover:-translate-y-1 group">
+            <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-xl shadow-lg shadow-blue-500/30 group-hover:shadow-xl group-hover:shadow-blue-500/40 transition-all duration-500">
+              <Package className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <div>
-              <p className="text-[10px] sm:text-xs text-gray-600 uppercase tracking-wider">Products</p>
-              <p className="text-lg sm:text-2xl font-bold text-gray-900">{stats.totalProducts}</p>
+              <p className="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider font-semibold">Products</p>
+              <p className="text-xl sm:text-2xl font-black text-gray-900 group-hover:scale-110 transition-transform duration-300">{stats.totalProducts}</p>
             </div>
           </div>
           <button
             onClick={() => setShowDailyTracker(true)}
-            className="bg-red-600 rounded-lg sm:rounded-xl p-3 sm:p-4 flex items-center gap-2 sm:gap-3 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:bg-red-700 cursor-pointer"
+            className="bg-gradient-to-br from-red-600 to-red-700 rounded-xl p-4 flex items-center gap-3 hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:from-red-700 hover:to-red-800 cursor-pointer transform hover:-translate-y-1 group shadow-lg shadow-red-600/30"
           >
-            <div className="bg-white/20 p-2 sm:p-3 rounded-lg">
-              <Target className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+            <div className="bg-white/20 p-3 rounded-xl group-hover:bg-white/30 transition-all duration-500">
+              <Target className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform duration-300" />
             </div>
             <div className="text-left">
-              <p className="text-[10px] sm:text-xs text-white/90 uppercase tracking-wider">Daily Goal</p>
-              <p className="text-lg sm:text-2xl font-bold text-white">Track</p>
+              <p className="text-[10px] sm:text-xs text-white/90 uppercase tracking-wider font-semibold">Daily Goal</p>
+              <p className="text-xl sm:text-2xl font-black text-white group-hover:scale-110 transition-transform duration-300">Track</p>
             </div>
           </button>
         </div>
 
-        <div className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 border border-gray-200 shadow-lg">
+        <div className="bg-white rounded-2xl p-6 mb-8 border-2 border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-500">
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-center sm:justify-between">
             <div className="flex gap-2 w-full sm:w-auto">
               <button
                 onClick={() => setViewMode('table')}
-                className={`flex-1 sm:flex-initial px-3 sm:px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 ${
+                className={`flex-1 sm:flex-initial px-4 py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 font-semibold transform ${
                   viewMode === 'table' 
-                    ? 'bg-red-600 text-white shadow-lg scale-105' 
-                    : 'bg-white border-2 border-gray-300 text-gray-700 hover:border-red-300'
+                    ? 'bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg scale-105 shadow-red-600/30' 
+                    : 'bg-white border-2 border-gray-200 text-gray-700 hover:border-red-300 hover:shadow-md'
                 }`}
               >
                 <List className="w-4 h-4" />
@@ -179,10 +182,10 @@ function App() {
               </button>
               <button
                 onClick={() => setViewMode('cards')}
-                className={`flex-1 sm:flex-initial px-3 sm:px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 ${
+                className={`flex-1 sm:flex-initial px-4 py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 font-semibold transform ${
                   viewMode === 'cards' 
-                    ? 'bg-red-600 text-white shadow-lg scale-105' 
-                    : 'bg-white border-2 border-gray-300 text-gray-700 hover:border-red-300'
+                    ? 'bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg scale-105 shadow-red-600/30' 
+                    : 'bg-white border-2 border-gray-200 text-gray-700 hover:border-red-300 hover:shadow-md'
                 }`}
               >
                 <Grid className="w-4 h-4" />
@@ -194,7 +197,7 @@ function App() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="flex-1 sm:flex-initial px-2 sm:px-4 py-2 rounded-lg bg-white text-gray-900 text-sm sm:text-base border-2 border-gray-300 focus:border-red-500 focus:outline-none transition-all duration-300 hover:border-gray-400"
+                className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-white text-gray-900 text-sm sm:text-base border-2 border-gray-200 focus:border-red-500 focus:outline-none transition-all duration-300 hover:border-gray-300 hover:shadow-md font-medium"
               >
                 <option value="score">Score</option>
                 <option value="proteinPerCHF">Value</option>
@@ -207,7 +210,7 @@ function App() {
               <select
                 value={filterLocation}
                 onChange={(e) => setFilterLocation(e.target.value)}
-                className="flex-1 sm:flex-initial px-2 sm:px-4 py-2 rounded-lg bg-white text-gray-900 text-sm sm:text-base border-2 border-gray-300 focus:border-red-500 focus:outline-none transition-all duration-300 hover:border-gray-400"
+                className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-white text-gray-900 text-sm sm:text-base border-2 border-gray-200 focus:border-red-500 focus:outline-none transition-all duration-300 hover:border-gray-300 hover:shadow-md font-medium"
               >
                 {locations.map(loc => (
                   <option key={loc} value={loc}>
@@ -220,7 +223,7 @@ function App() {
             <div className="flex gap-2 w-full sm:w-auto">
               <button
                 onClick={() => setShowAddModal(true)}
-                className="flex-1 sm:flex-initial px-3 sm:px-4 py-2 bg-red-600 text-white hover:bg-red-700 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold"
+                className="flex-1 sm:flex-initial px-4 py-2.5 bg-gradient-to-r from-red-600 to-red-700 text-white hover:from-red-700 hover:to-red-800 rounded-xl flex items-center justify-center gap-2 transition-all duration-500 transform hover:scale-105 shadow-lg shadow-red-600/30 font-bold"
               >
                 <Plus className="w-4 h-4" />
                 <span className="sm:inline">Add</span>
@@ -228,13 +231,13 @@ function App() {
               <div className="flex gap-2">
                 <button
                   onClick={exportData}
-                  className="px-3 sm:px-4 py-2 bg-white border-2 border-gray-300 hover:border-gray-400 rounded-lg flex items-center justify-center gap-1 transition-all duration-300 text-gray-700"
+                  className="px-4 py-2.5 bg-white border-2 border-gray-200 hover:border-gray-300 rounded-xl flex items-center justify-center gap-1 transition-all duration-300 text-gray-700 hover:shadow-md font-medium"
                   title="Export data"
                 >
                   <Download className="w-4 h-4" />
                   <span className="hidden lg:inline">Export</span>
                 </button>
-                <label className="px-3 sm:px-4 py-2 bg-white border-2 border-gray-300 hover:border-gray-400 rounded-lg flex items-center justify-center gap-1 cursor-pointer transition-all duration-300 text-gray-700"
+                <label className="px-4 py-2.5 bg-white border-2 border-gray-200 hover:border-gray-300 rounded-xl flex items-center justify-center gap-1 cursor-pointer transition-all duration-300 text-gray-700 hover:shadow-md font-medium"
                   title="Import data"
                 >
                   <Upload className="w-4 h-4" />
@@ -252,7 +255,7 @@ function App() {
                       resetToWelcome()
                     }
                   }}
-                  className="px-3 sm:px-4 py-2 bg-white border-2 border-red-300 hover:bg-red-50 rounded-lg flex items-center justify-center gap-1 transition-all duration-300"
+                  className="px-4 py-2.5 bg-white border-2 border-red-200 hover:bg-red-50 hover:border-red-300 rounded-xl flex items-center justify-center gap-1 transition-all duration-300 hover:shadow-md font-medium"
                   title="Reset and start over"
                 >
                   <RefreshCw className="w-4 h-4 text-red-600" />

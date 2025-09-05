@@ -4,10 +4,10 @@ import { Edit, Trash2, Trophy, TrendingUp, Sparkles, MapPin, Package } from 'luc
 function ProductCard({ product, onEdit, onDelete }) {
   const getScoreColor = (score) => {
     const numScore = parseFloat(score)
-    if (numScore >= 100) return 'text-green-400 bg-green-400/10'
-    if (numScore >= 80) return 'text-yellow-400 bg-yellow-400/10'
-    if (numScore >= 60) return 'text-orange-400 bg-orange-400/10'
-    return 'text-red-400 bg-red-400/10'
+    if (numScore >= 100) return 'bg-gradient-to-r from-green-500 to-green-600 text-white'
+    if (numScore >= 80) return 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white'
+    if (numScore >= 60) return 'bg-gradient-to-r from-orange-500 to-red-500 text-white'
+    return 'bg-gradient-to-r from-red-500 to-red-600 text-white'
   }
 
   const getTasteEmoji = (taste) => {
@@ -20,45 +20,45 @@ function ProductCard({ product, onEdit, onDelete }) {
 
   const getLocationColor = (location) => {
     switch(location) {
-      case 'Migros': return 'bg-orange-500/20 text-orange-300 border-orange-500/30'
-      case 'Coop': return 'bg-red-500/20 text-red-300 border-red-500/30'
-      case 'Lidl': return 'bg-blue-500/20 text-blue-300 border-blue-500/30'
-      case 'Aldi': return 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30'
-      default: return 'bg-gray-500/20 text-gray-300 border-gray-500/30'
+      case 'Migros': return 'bg-orange-500 text-white'
+      case 'Coop': return 'bg-red-500 text-white'
+      case 'Lidl': return 'bg-blue-500 text-white'
+      case 'Aldi': return 'bg-cyan-500 text-white'
+      default: return 'bg-gray-500 text-white'
     }
   }
 
   return (
-    <div className="bg-white rounded-lg p-4 sm:p-5 hover:shadow-xl transition-all sm:hover:scale-[1.02] border-2 border-gray-200">
+    <div className="bg-white rounded-xl p-5 hover:shadow-2xl transition-all duration-500 hover:scale-[1.03] border-2 border-gray-100 transform hover:-translate-y-1 group">
       <div className="flex justify-between items-start mb-3">
         <div className="flex-1">
           <h3 className="font-semibold text-base sm:text-lg text-gray-900 mb-1">{product.name}</h3>
           <p className="text-xs sm:text-sm text-gray-600">{product.brand}</p>
         </div>
-        <div className={`px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg font-bold text-base sm:text-lg ${getScoreColor(product.score)}`}>
+        <div className={`px-3 py-2 rounded-xl font-black text-lg sm:text-xl shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 ${getScoreColor(product.score)}`}>
           {product.score}
         </div>
       </div>
 
-      <div className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium mb-4 border ${getLocationColor(product.location)}`}>
+      <div className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-bold mb-4 shadow-md transform group-hover:scale-110 transition-all duration-300 ${getLocationColor(product.location)}`}>
         <MapPin className="w-3 h-3" />
         {product.location}
       </div>
 
       <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
-        <div className="bg-gray-50 rounded-lg p-2 sm:p-3 border border-gray-200">
+        <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-3 border border-gray-100 shadow-sm group-hover:shadow-md transition-all duration-300">
           <div className="flex items-center gap-1 text-[10px] sm:text-xs text-gray-400 mb-1">
             <TrendingUp className="w-3 h-3" />
             <span>Value</span>
           </div>
-          <p className="text-base sm:text-lg font-semibold text-green-400">{product.proteinPerCHF}g</p>
+          <p className="text-base sm:text-lg font-black text-green-600 bg-green-50 px-2 py-0.5 rounded-lg inline-block">{product.proteinPerCHF}g</p>
         </div>
-        <div className="bg-gray-50 rounded-lg p-2 sm:p-3 border border-gray-200">
+        <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-3 border border-gray-100 shadow-sm group-hover:shadow-md transition-all duration-300">
           <div className="flex items-center gap-1 text-[10px] sm:text-xs text-gray-400 mb-1">
             <Sparkles className="w-3 h-3" />
             <span>Taste</span>
           </div>
-          <p className="text-base sm:text-lg font-semibold text-gray-900 flex items-center gap-1">
+          <p className="text-base sm:text-lg font-black text-gray-900 flex items-center gap-1">
             {product.taste}/10 {getTasteEmoji(product.taste)}
           </p>
         </div>
@@ -67,7 +67,7 @@ function ProductCard({ product, onEdit, onDelete }) {
       <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
         <div className="flex justify-between">
           <span className="text-gray-600">Price</span>
-          <span className="text-orange-600 font-medium">CHF {product.price.toFixed(2)}</span>
+          <span className="text-orange-600 font-bold bg-orange-50 px-2 py-0.5 rounded-lg inline-block">CHF {product.price.toFixed(2)}</span>
         </div>
         <div className="flex justify-between">
           <span className="text-gray-600">Protein</span>

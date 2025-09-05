@@ -20,50 +20,50 @@ function ProductTableMobile({ products, onEdit, onDelete }) {
 
   const getLocationColor = (location) => {
     switch(location) {
-      case 'Migros': return 'bg-orange-500/20 text-orange-300'
-      case 'Coop': return 'bg-red-500/20 text-red-300'
-      case 'Lidl': return 'bg-blue-500/20 text-blue-300'
-      case 'Aldi': return 'bg-cyan-500/20 text-cyan-300'
-      default: return 'bg-gray-500/20 text-gray-300'
+      case 'Migros': return 'bg-orange-500 text-white shadow-orange-500/30 shadow-md'
+      case 'Coop': return 'bg-red-500 text-white shadow-red-500/30 shadow-md'
+      case 'Lidl': return 'bg-blue-500 text-white shadow-blue-500/30 shadow-md'
+      case 'Aldi': return 'bg-cyan-500 text-white shadow-cyan-500/30 shadow-md'
+      default: return 'bg-gray-500 text-white shadow-gray-500/30 shadow-md'
     }
   }
 
   return (
     <div className="space-y-3">
       {products.map((product) => (
-        <div key={product.id} className="bg-white rounded-xl p-4 border-2 border-gray-200 shadow-md">
+        <div key={product.id} className="bg-white rounded-xl p-4 border-2 border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-1">
           <div className="flex justify-between items-start mb-3">
             <div>
               <h3 className="font-semibold text-gray-900 text-lg">{product.name}</h3>
               <p className="text-sm text-gray-600">{product.brand}</p>
-              <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium mt-2 ${getLocationColor(product.location)}`}>
+              <span className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-bold mt-2 transform transition-all duration-300 hover:scale-110 ${getLocationColor(product.location)}`}>
                 <MapPin className="w-3 h-3" />
                 {product.location}
               </span>
             </div>
-            <div className={`bg-gradient-to-r ${getScoreColor(product.score)} text-white px-3 py-1.5 rounded-lg font-bold text-lg shadow-md`}>
+            <div className={`bg-gradient-to-r ${getScoreColor(product.score)} text-white px-4 py-2 rounded-xl font-black text-xl shadow-lg transform hover:scale-110 transition-all duration-300`}>
               {product.score}
             </div>
           </div>
 
           <div className="grid grid-cols-3 gap-2 mb-3">
-            <div className="bg-gray-50 rounded-lg p-2 text-center border border-gray-200">
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-3 text-center border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
               <div className="flex items-center justify-center gap-1 mb-1">
                 <TrendingUp className="w-3 h-3 text-green-400" />
                 <span className="text-[10px] text-gray-400">Value</span>
               </div>
-              <p className="text-sm font-semibold text-green-400">{product.proteinPerCHF}g</p>
+              <p className="text-sm font-black text-green-600 bg-green-50 px-2 py-0.5 rounded-lg inline-block">{product.proteinPerCHF}g</p>
             </div>
-            <div className="bg-gray-50 rounded-lg p-2 text-center border border-gray-200">
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-3 text-center border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
               <div className="flex items-center justify-center gap-1 mb-1">
                 <Sparkles className="w-3 h-3 text-white" />
                 <span className="text-[10px] text-gray-400">Taste</span>
               </div>
-              <p className="text-sm font-semibold text-gray-900">{product.taste}/10 {getTasteEmoji(product.taste)}</p>
+              <p className="text-sm font-black text-gray-900">{product.taste}/10 {getTasteEmoji(product.taste)}</p>
             </div>
-            <div className="bg-gray-50 rounded-lg p-2 text-center border border-gray-200">
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-3 text-center border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
               <span className="text-[10px] text-gray-400 block">Price</span>
-              <p className="text-sm font-semibold text-orange-600">CHF {product.price.toFixed(2)}</p>
+              <p className="text-sm font-black text-orange-600 bg-orange-50 px-2 py-0.5 rounded-lg inline-block">CHF {product.price.toFixed(2)}</p>
             </div>
           </div>
 
