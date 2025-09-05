@@ -27,10 +27,6 @@ npm run dev
 npm run build
 ```
 
-## Deployment
-
-This project is set up for automatic deployment to Vercel. Simply push to the main branch and it will deploy automatically.
-
 ## About
 
 Built by [Doruk Ozturk](https://www.linkedin.com/in/doruk-ozturk) - a student in Switzerland trying to hit 140g protein daily without protein powder and on a budget.
