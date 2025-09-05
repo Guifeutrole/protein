@@ -56,7 +56,7 @@ function ProductTableMobile({ products, onEdit, onDelete }) {
             </div>
             <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-3 text-center border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
               <div className="flex items-center justify-center gap-1 mb-1">
-                <Sparkles className="w-3 h-3 text-white" />
+                <Sparkles className="w-3 h-3 text-yellow-500" />
                 <span className="text-[10px] text-gray-400">Taste</span>
               </div>
               <p className="text-sm font-black text-gray-900">{product.taste}/10 {getTasteEmoji(product.taste)}</p>
