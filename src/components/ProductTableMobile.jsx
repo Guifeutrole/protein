@@ -24,6 +24,7 @@ function ProductTableMobile({ products, onEdit, onDelete }) {
       case 'Coop': return 'bg-red-500 text-white shadow-red-500/30 shadow-md'
       case 'Lidl': return 'bg-blue-500 text-white shadow-blue-500/30 shadow-md'
       case 'Aldi': return 'bg-cyan-500 text-white shadow-cyan-500/30 shadow-md'
+      case 'Online': return 'bg-purple-500 text-white shadow-purple-500/30 shadow-md'
       default: return 'bg-gray-500 text-white shadow-gray-500/30 shadow-md'
     }
   }

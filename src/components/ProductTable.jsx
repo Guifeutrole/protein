@@ -64,6 +64,7 @@ function ProductTable({ products, onEdit, onDelete }) {
                   product.location === 'Coop' ? 'bg-red-500 text-white shadow-red-500/30 shadow-lg' :
                   product.location === 'Lidl' ? 'bg-blue-500 text-white shadow-blue-500/30 shadow-lg' :
                   product.location === 'Aldi' ? 'bg-cyan-500 text-white shadow-cyan-500/30 shadow-lg' :
+                  product.location === 'Online' ? 'bg-purple-500 text-white shadow-purple-500/30 shadow-lg' :
                   'bg-gray-500 text-white shadow-gray-500/30 shadow-lg'
                 }`}>
                   {product.location}

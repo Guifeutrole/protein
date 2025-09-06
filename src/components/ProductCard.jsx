@@ -24,6 +24,7 @@ function ProductCard({ product, onEdit, onDelete }) {
       case 'Coop': return 'bg-red-500 text-white'
       case 'Lidl': return 'bg-blue-500 text-white'
       case 'Aldi': return 'bg-cyan-500 text-white'
+      case 'Online': return 'bg-purple-500 text-white'
       default: return 'bg-gray-500 text-white'
     }
   }

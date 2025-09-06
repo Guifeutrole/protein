@@ -274,6 +274,32 @@ const DORUKS_DATA = [
     calories: 290,
     proteinPer100: 8.0,
     caloriesPer100: 58
+  },
+  {
+    id: 22,
+    name: "Whey Isolate Neutral",
+    brand: "Lee-Sport",
+    location: "Online",
+    taste: 6,
+    price: 31.90,
+    size: 1000,
+    protein: 900.0,
+    calories: 3720,
+    proteinPer100: 90.0,
+    caloriesPer100: 372
+  },
+  {
+    id: 23,
+    name: "Ísey Skyr",
+    brand: "Ísey",
+    location: "Migros",
+    taste: 6,
+    price: 1.30,
+    size: 170,
+    protein: 16.15,
+    calories: 134.3,
+    proteinPer100: 9.5,
+    caloriesPer100: 79
   }
 ]
 
