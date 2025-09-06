@@ -215,7 +215,7 @@ const DORUKS_DATA = [
     name: "Red Thai Curry",
     brand: "Coop Q&P",
     location: "Coop",
-    taste: 10,
+    taste: 9,
     price: 2.90,
     size: 350,
     protein: 22.4,
